@@ -1,0 +1,33 @@
+{
+  "name": "docker-node-nvidia",
+  "version": "0.0.1",
+  "description": "nvidia binary drivers pre-baked node, on debian jessie",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "test": "exit 0"
+  },
+  "author": "Flynn Joffray <nucleardreamer@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "~2.1.5",
+    "dockerfile-template": "~0.0.2",
+    "dockerode": "~2.4.2",
+    "scrape-it": "~3.3.1",
+    "tar-stream": "~1.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nucleardreamer/docker-node-nvidia.git"
+  },
+  "keywords": [
+    "docker",
+    "node",
+    "nvidia"
+  ],
+  "bugs": {
+    "url": "https://github.com/nucleardreamer/docker-node-nvidia/issues"
+  },
+  "homepage": "https://github.com/nucleardreamer/docker-node-nvidia#readme"
+}
