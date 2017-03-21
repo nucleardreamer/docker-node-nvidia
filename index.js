@@ -1,5 +1,6 @@
 const { join } = require('path')
 const { readFileSync } = require('fs')
+const { spawn } = require('child_process')
 const async = require('async')
 const tar = require('tar-stream')
 const scrape = require('scrape-it')
@@ -55,6 +56,10 @@ function start (items, [ BASE, BASE_TAG, DOCKER_TAG ]) {
           stream.pipe(process.stdout, { end: true })
           stream.on('end', function() {
             console.log('* Finished:', DOCKER_TAG + NVIDIA_VERSION)
+            spawn('docker', ['push', TAG], {
+              detached: false,
+              stdio: [process.stdin, process.stdout, process.stderr]
+            })
             cb()
           })
         }
